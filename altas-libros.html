@@ -103,7 +103,7 @@
     <script type="text/javascript">
     $.ajax({
 type: 'GET',
-url: 'http://localhost:3000/categoria',
+url: 'https://back-end-biblioteca-180411.herokuapp.com/categoria',
 beforeSend: function(request) {
 request.setRequestHeader("token", window.localStorage.getItem('token'));
 },
@@ -123,7 +123,7 @@ e.preventDefault();
 e.stopImmediatePropagation();
 $.ajax({
 type: 'POST',
-url: 'http://localhost:3000/libro',
+url: 'https://back-end-biblioteca-180411.herokuapp.com/libro',
 data: $('form').serialize(),
 beforeSend: function(request) {
 request.setRequestHeader("token", window.localStorage.getItem('token'));
@@ -134,7 +134,7 @@ var formData = new FormData();
 formData.append('archivo', $('input[type=file]')[0].files[0]);
 $.ajax({
 type: 'PUT',
-url: `http://localhost:3000/upload/libro/${resp.libroDB._id}`,
+url: `https://back-end-biblioteca-180411.herokuapp.com/upload/libro/${resp.libroDB._id}`,
 data: formData,
 processData: false,
 contentType: false,

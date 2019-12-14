@@ -123,7 +123,7 @@
                 $(document).ready(function() {
                     $.ajax({
                         type: 'GET',
-                        url: 'http://localhost:3000/libro',
+                        url: 'https://back-end-biblioteca-180411.herokuapp.com/libro',
                         beforeSend: function(request) {
                             request.setRequestHeader("token", window.localStorage.getItem('token'));
                         },
@@ -137,7 +137,7 @@
                                     `<td><b>` + item.estado + `</b></td>` +
                                     `<td>` + item.ubicacion + `</td>` +
                                     `<td><b>` + item.precio + `</b></td>` +
-                                    `<td><img class='img-thumbnail img-fluid' width='80px' src='http://localhost:3000/imagen/libro/${item.img}'></td>` +
+                                    `<td><img class='img-thumbnail img-fluid' width='80px' src='https://back-end-biblioteca-180411.herokuapp.com/imagen/libro/${item.img}'></td>` +
                                     `</tr>`);
                             });
                             // $.each(resp, function(i, item) {
@@ -171,7 +171,7 @@
                 $(document).ready(function() {
                     $.ajax({
                         type: 'GET',
-                        url: 'http://localhost:3000/prestamo/rentados',
+                        url: 'https://back-end-biblioteca-180411.herokuapp.com/prestamo/rentados',
                         beforeSend: function(request) {
                             request.setRequestHeader("token", window.localStorage.getItem('token'));
                         },
@@ -219,7 +219,7 @@
                     $(document).ready(function() {
                         $.ajax({
                             type: 'GET',
-                            url: 'http://localhost:3000/prestamo/noRentados',
+                            url: 'https://back-end-biblioteca-180411.herokuapp.com/prestamo/noRentados',
                             beforeSend: function(request) {
                                 request.setRequestHeader("token", window.localStorage.getItem('token'));
                             },

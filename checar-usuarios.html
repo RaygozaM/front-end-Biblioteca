@@ -121,7 +121,7 @@
                 $(document).ready(function() {
                     $.ajax({
                         type: 'GET',
-                        url: 'http://localhost:3000/usuario',
+                        url: 'https://back-end-biblioteca-180411.herokuapp.com/usuario',
                         beforeSend: function(request) {
                             request.setRequestHeader("token", window.localStorage.getItem('token'));
                         },
@@ -132,7 +132,7 @@
                                     `<td><b>` + item._id + `</b></td>` +
                                     `<td>` + item.nombre + `</td>` +
                                     `<td>` + item.email + `</td>` +
-                                    `<td><img class='img-thumbnail img-fluid' width='80px' src='http://localhost:3000/imagen/usuario/${item.img}'></td>` +
+                                    `<td><img class='img-thumbnail img-fluid' width='80px' src='https://back-end-biblioteca-180411.herokuapp.com/imagen/usuario/${item.img}'></td>` +
                                     `<td><b>` + item.estado + `</td>` +
                                     `</tr>`);
                             });

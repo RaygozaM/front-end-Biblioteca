@@ -103,7 +103,7 @@ e.stopImmediatePropagation();
 
 $.ajax({
 type: 'POST',
-url: 'http://localhost:3000/usuario',
+url: 'https://back-end-biblioteca-180411.herokuapp.com/usuario',
 data: $('form').serialize(),
 beforeSend: function(request) {
 request.setRequestHeader("token", window.localStorage.getItem('token'));
@@ -114,7 +114,7 @@ var formData = new FormData();
 formData.append('archivo', $('input[type=file]')[0].files[0]);
 $.ajax({
 type: 'PUT',
-url: `http://localhost:3000/upload/usuario/${resp.usrDB._id}`,
+url: `https://back-end-biblioteca-180411.herokuapp.com/upload/usuario/${resp.usrDB._id}`,
 data: formData,
 processData: false,
 contentType: false,

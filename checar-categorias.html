@@ -119,7 +119,7 @@
                 $(document).ready(function() {
                     $.ajax({
                         type: 'GET',
-                        url: 'http://localhost:3000/categoria',
+                        url: 'https://back-end-biblioteca-180411.herokuapp.com/categoria',
                         beforeSend: function(request) {
                             request.setRequestHeader("token", window.localStorage.getItem('token'));
                         },

@@ -104,7 +104,7 @@
     <script type="text/javascript">
         $.ajax({
 type: 'GET',
-url: 'http://localhost:3000/usuario',
+url: 'https://back-end-biblioteca-180411.herokuapp.com/usuario',
 beforeSend: function(request) {
 request.setRequestHeader("token", window.localStorage.getItem('token'));
 },
@@ -121,7 +121,7 @@ console.log(err.responseJSON);
 });
 $.ajax({
 type: 'GET',
-url: 'http://localhost:3000/libro/noDisponible',
+url: 'https://back-end-biblioteca-180411.herokuapp.com/libro/noDisponible',
 beforeSend: function(request) {
 request.setRequestHeader("token", window.localStorage.getItem('token'));
 },
@@ -138,7 +138,7 @@ console.log(err.responseJSON);
 });
 $.ajax({
 type: 'GET',
-url: 'http://localhost:3000/prestamo',
+url: 'https://back-end-biblioteca-180411.herokuapp.com/prestamo',
 beforeSend: function(request) {
 request.setRequestHeader("token", window.localStorage.getItem('token'));
 },
@@ -159,7 +159,7 @@ console.log(err.responseJSON);
         
         $.ajax({
         type: 'POST',
-        url: 'http://localhost:3000/devolucion',
+        url: 'https://back-end-biblioteca-180411.herokuapp.com/devolucion',
         data: $('form').serialize(),
 
         beforeSend: function(request) {

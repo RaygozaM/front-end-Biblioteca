@@ -102,7 +102,7 @@
 
 $.ajax({
 type: 'GET',
-url: 'http://localhost:3000/categoria/todo',
+url: 'https://back-end-biblioteca-180411.herokuapp.com/categoria/todo',
 beforeSend: function(request) {
 request.setRequestHeader("token", window.localStorage.getItem('token'));
 },
@@ -123,7 +123,7 @@ console.log(err.responseJSON);
         let id = document.getElementsByName("id")[0].value;
         $.ajax({
         type: 'PUT',
-        url: 'http://localhost:3000/categoria/' + id,
+        url: 'https://back-end-biblioteca-180411.herokuapp.com/categoria/' + id,
         data: $('form').serialize(),
 
         beforeSend: function(request) {

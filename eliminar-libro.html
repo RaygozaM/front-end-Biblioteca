@@ -118,7 +118,7 @@
             <script type="text/javascript">
 $.ajax({
 type: 'GET',
-url: 'http://localhost:3000/libro/eliminado',
+url: 'https://back-end-biblioteca-180411.herokuapp.com/libro/eliminado',
 beforeSend: function(request) {
 request.setRequestHeader("token", window.localStorage.getItem('token'));
 },
@@ -140,7 +140,7 @@ console.log(err.responseJSON);
                 let id = document.getElementsByName("id")[0].value;
                 $.ajax({
                 type: 'DELETE',
-                url: 'http://localhost:3000/libro/' + id,
+                url: 'https://back-end-biblioteca-180411.herokuapp.com/libro/' + id,
                 data: $('form').serialize(),
         
                 beforeSend: function(request) {
